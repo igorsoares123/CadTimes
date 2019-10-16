@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset=UTF-8>
+<title>Cadastro de Times</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	
+	<form action="/times" method="post">
+		 <div id="cadastro">
+		<label>Técnico</label>
+		<input type="text" name="tecnico"><br>
+		<label>Time</label>
+		<input type="text" name="time"><br>
+		<button type="button" class="btn btn-outline-success">Enviar</button>
+	</form>
+	<table border="1px">
+		<br>
+		<tr>
+			<th>Id</th>
+			<th>Técnico</th>
+			<th>Time</th>
+			<th>Editar</th>
+			<th>Excluir</th>
+		</tr>
+	<tr th:each="t : ${times}">
+  		<td th:text=${t.id}>1</td>
+  		<td th:text="${t.tecnico}">Sampaoli</td> 
+  		<td th:text="${t.time}">Santos</td>  	
+  		<td><a class="btn btn-outline-primary" th:href="@{/delete/{id}(id=${t.id})}">Editar</a></td>	
+  		<td><a class="btn btn-outline-danger"th:href="@{/editar/{id}(id=${t.id})}">Excluir</a></td>
+  	</tr>
+	</table>
+</body>
+</html>

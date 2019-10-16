@@ -1,0 +1,12 @@
+CREATE DATABASE campeonato;
+
+USE campeonato;
+
+CREATE TABLE times(
+id int(4) AUTO_INCREMENT,
+tecnico varchar(45) NOT NULL,
+time varchar(45) NOT NULL,
+PRIMARY KEY (id)
+);
+
+SELECT * FROM times;
