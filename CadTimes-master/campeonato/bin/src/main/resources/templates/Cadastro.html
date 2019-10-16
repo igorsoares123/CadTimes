@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset=UTF-8>
+<title>Cadastro de Times</title>
+</head>
+<body>
+	<form action="/times" method="post">
+		<label>Técnico</label>
+		<input type="text" name="tecnico">
+		<label>Time</label>
+		<input type="text" name="time">
+		<input type="submit" name="salvar">
+	</form>
+	<table border="1px">
+		<tr>
+			<th>Id</th>
+			<th>Técnico</th>
+			<th>Time</th>
+			<th>Editar</th>
+			<th>Excluir</th>
+		</tr>
+	<tr th:each="t : ${times}">
+  		<td th:text=${t.id}>1</td>
+  		<td th:text="${t.tecnico}">Sampaoli</td> 
+  		<td th:text="${t.time}">Santos</td>  	
+  		<td><a class="btn btn-outline-danger" th:href="@{/delete/{id}(id=${t.id})}">Excluir</a></td>	
+  		<td><a th:href="@{/editar/{id}(id=${t.id})}">Editar</a></td>
+  	</tr>
+	</table>
+</body>
+</html>
