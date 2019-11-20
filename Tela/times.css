@@ -1,0 +1,19 @@
+#titulo{
+	color: white;
+}
+#rotulo{
+	font-size: 25px;
+	color: white;
+}
+body{
+	background-image: url("1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#logo{
+	background-image: url("");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
