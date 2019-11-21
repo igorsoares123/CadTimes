@@ -3,24 +3,32 @@
 	<title>Cadastro de time</title>
 	<link rel="stylesheet" type="text/css" href="times.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
 </head>
 <body>
-		<center>
-	<h1 id="titulo">Cadastro de time</h1>
-	<div id="logo"></div>
-
-	<form method="get">
-    <label id="rotulo">Técnico</label><input type="text" name="nome" placeholder="digite seu Nome aqui">
-    <label id="rotulo">Time</label><input type="e-mail" name="email" placeholder="Nome do Time">
-
-    
-
-    <input type="submit" name="enviar" value="Enviar" class="btn btn-success">
-    </center>
+	<h1 style="color: white; font-size: 60px;">Cadastro de Times</h1>
+	<form>
+  <div class="input-group-prepend" >
+    <div  >
       
+      <input type="text" class="form-control mb-2"  placeholder="Nome do Técnico">
+    </div>
+    <div class="col-auto">
+      
+     
+        <div class="input-group-prepend">
+          
+       
+        <input type="text" class="form-control"  placeholder="Nome do Time">
+      </div>
+    </div>
     
-</table>
-    
+    <div class="col-auto">
+      <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+ Enviar
+</button>
+    </div>
+  </div>
   
 </form>
 </body>
