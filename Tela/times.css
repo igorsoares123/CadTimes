@@ -1,12 +1,18 @@
 #titulo{
 	color: white;
 }
+.center{
+	text-align: center;
+}
+.center *{
+	display: inline-block;
+}
 #rotulo{
 	font-size: 20px;
 	color: white;
 	text-align: center;
-
 }
+
 body{
 	background-image: url("1.jpg");
 	background-size: cover;
