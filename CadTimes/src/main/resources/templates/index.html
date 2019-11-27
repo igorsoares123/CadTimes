@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+	<title>Cadastro de time</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+</head>
+<style>
+#titulo{
+	color: white;
+}
+.center{
+	text-align: center;
+}
+.center *{
+	display: inline-block;
+}
+#rotulo{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+
+body{
+	background-image: url("1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#tela{
+	width:580px;
+
+
+}
+</style>
+<body>
+  <div class="center">
+	<h1 style="color: white; font-size: 60px;">Cadastro de Times</h1><br>
+	<form action="/salvar" action="GET">
+  <div class="input-group-prepend" >
+    <div  >
+      
+      <input type="text" class="form-control mb-2"  placeholder="Nome do Técnico">
+    </div>
+    <div class="col-auto">
+      
+     
+        <div class="input-group-prepend">
+          
+       
+        <input type="text" class="form-control"  placeholder="Nome do Time">
+      </div>
+    </div>
+    
+    <div class="col-auto">
+      <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+ Enviar
+</button>
+    </div> 
+
+  </div>
+  </div>
+  <div id="tela">
+  <table border="1px" style="color:white" class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th>Codígo</th>
+      <th>Técnico</th>
+      <th>Time</th>
+      <th>Excluir</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="t : ${TimeRepository}">
+      <th th:text="${t.id}"></th>
+      <th th:text="${t.tecnico}"></th>
+      <th th:text="${t.time}"></th>
+      <th><a href="#"><button type="button" class="btn btn-danger">Excluir</button></a></th>
+      <th><a href="#"><button type="button" class="btn btn-primary">Editar</button></a></th>
+    </tr>
+   </tbody>
+    </div>
+</form>
+</body>
+</html>
